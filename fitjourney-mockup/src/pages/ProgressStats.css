@@ -1,0 +1,256 @@
+/* Estilos generales */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Menú desplegable del usuario */
+.user-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.user-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.user-menu li:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Contenido principal */
+.progress-stats {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Ajuste para evitar que el contenido se solape con el header */
+  margin-bottom: 80px; /* Ajuste para evitar que el contenido se solape con el footer */
+}
+
+.progress-stats h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Gráfico de Progreso de Peso */
+.chart-container {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Resumen de Calorías */
+.calories-summary {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calories-summary h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.calories-summary p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Resumen de Peso */
+.weight-summary {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weight-summary h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.weight-summary p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Resumen de Actividades */
+.activity-summary {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-summary h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.activity-summary p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Logros y Metas */
+.achievements {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievements h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.achievements p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+ 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.footer-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Modo oscuro */
+.dark-mode .app {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-mode .progress-stats,
+.dark-mode .chart-container,
+.dark-mode .calories-summary,
+.dark-mode .weight-summary,
+.dark-mode .activity-summary,
+.dark-mode .achievements {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p {
+  color: #f5f5f5;
+}
+
+.dark-mode .footer {
+  background-color: #333;
+}
+
+.load-more-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.load-more-button:hover {
+  background-color: #0056b3;
+}

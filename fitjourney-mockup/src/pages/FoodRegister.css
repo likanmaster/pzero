@@ -1,0 +1,317 @@
+/* Estilos generales */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Menú desplegable del usuario */
+.user-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.user-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.user-menu li:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Contenido principal */
+.food-register {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Ajuste para evitar que el contenido se solape con el header */
+  margin-bottom: 80px; /* Ajuste para evitar que el contenido se solape con el footer */
+}
+
+.food-register h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Formulario de registro de alimentos */
+.food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.food-form input[type="text"],
+.food-form input[type="number"] {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-form input[type="text"]:focus,
+.food-form input[type="number"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+.food-form button {
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.food-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de alimentos registrados */
+.food-list {
+  margin-bottom: 30px;
+}
+
+.food-list h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.food-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.food-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.food-list li span {
+  font-size: 16px;
+  color: #333;
+}
+
+.food-list li button {
+  padding: 8px 12px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.food-list li button:hover {
+  background-color: #e60000;
+  transform: translateY(-1px);
+}
+
+.food-list li button:active {
+  transform: translateY(0);
+}
+
+.food-list p {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Resumen de Calorías */
+.calories-summary {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.calories-summary h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+ 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.footer-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Modo oscuro */
+.dark-mode .app {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-mode .food-register {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.dark-mode .food-form input[type="text"],
+.dark-mode .food-form input[type="number"],
+.dark-mode .food-list li {
+  background-color: #3a3a3a;
+  border-color: #555;
+  color: #f5f5f5;
+}
+
+.dark-mode .food-form input[type="text"]:focus,
+.dark-mode .food-form input[type="number"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+.dark-mode .food-list li button {
+  background-color: #ff4d4d;
+}
+
+.dark-mode .food-list li button:hover {
+  background-color: #e60000;
+}
+
+.dark-mode .calories-summary {
+  color: #f5f5f5;
+}
+
+.dark-mode .calories-summary h3 {
+  color: #4CAF50;
+}
+
+/* Sugerencias de alimentos */
+.suggestions {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+/* Selector de fecha */
+.food-register input[type="date"] {
+  width: 92%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-register input[type="date"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+  outline: none;
+}

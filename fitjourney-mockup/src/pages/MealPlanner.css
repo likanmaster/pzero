@@ -1,0 +1,414 @@
+/* Estilos generales */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Menú desplegable del usuario */
+.user-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.user-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.user-menu li:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Contenido principal */
+.meal-planner {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Ajuste para evitar que el contenido se solape con el header */
+  margin-bottom: 80px; /* Ajuste para evitar que el contenido se solape con el footer */
+}
+
+.meal-planner h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Formulario para agregar comidas */
+.meal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.meal-form select,
+.meal-form input[type="text"],
+.meal-form input[type="number"] {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meal-form select:focus,
+.meal-form input[type="text"]:focus,
+.meal-form input[type="number"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+.meal-form button {
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meal-form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.meal-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de comidas planificadas */
+.meal-list {
+  margin-bottom: 30px;
+}
+
+.meal-list h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.meal-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.meal-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-list li span {
+  font-size: 16px;
+  color: #333;
+}
+
+.meal-list li button {
+  padding: 8px 12px;
+ 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.meal-list li button:hover {
+  background-color: #e60000;
+  transform: translateY(-1px);
+}
+
+.meal-list li button:active {
+  transform: translateY(0);
+}
+
+.meal-list p {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Resumen de Calorías Totales */
+.calories-summary {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.calories-summary h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.footer-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Modo oscuro */
+.dark-mode .app {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-mode .meal-planner {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+.dark-mode .meal-form select,
+.dark-mode .meal-form input[type="text"],
+.dark-mode .meal-form input[type="number"],
+.dark-mode .meal-list li {
+  background-color: #3a3a3a;
+  border-color: #555;
+  color: #f5f5f5;
+}
+
+.dark-mode .meal-form select:focus,
+.dark-mode .meal-form input[type="text"]:focus,
+.dark-mode .meal-form input[type="number"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+.dark-mode .meal-list li button {
+  background-color: #ff4d4d;
+}
+
+.dark-mode .meal-list li button:hover {
+  background-color: #e60000;
+}
+
+.dark-mode .calories-summary {
+  color: #f5f5f5;
+}
+
+.dark-mode .calories-summary h3 {
+  color: #4CAF50;
+}
+
+.activity-summary strong {
+  color: #4CAF50 !important;
+}
+.meal-planner {
+  padding: 20px;
+}
+
+.meal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.meal-form select,
+.meal-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.meal-form button {
+  padding: 10px;
+  background-color: #14ca0ec4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.meal-form button:hover {
+  background-color: #06b300b6;
+}
+
+.suggestions {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.meal-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meal-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.meal-list button {
+  background-color: #337c25;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.meal-list button:hover {
+  background-color: #cc0000;
+}
+
+.calories-summary {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+/*botones*/
+/* Estilos generales para los botones */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Estilo para el botón de "Agregar" */
+button[type="submit"] {
+  background-color: #4CAF50; /* Verde */
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para el botón de "Eliminar" */
+button.delete-btn {
+  background-color: #bb3228; /* Rojo */
+}
+
+button.delete-btn:hover {
+  background-color: #e53935;
+}
+
+/* Estilo para los botones de "Agregar" en las comidas planificadas */
+button:not([type="submit"]) {
+/*   background-color: #2196F3; /* Azul */
+   margin-left: 10px;
+}
+
+button:not([type="submit"]):hover {
+  background-color: #1976D2;
+}
+
+/* Estilo para el botón deshabilitado */
+button.disabled-button {
+  background-color: #d3d3d3; /* Gris claro */
+  cursor: not-allowed;
+}
+
+button.disabled-button:hover {
+  background-color: #d3d3d3;
+}

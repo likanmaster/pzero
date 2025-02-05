@@ -1,0 +1,69 @@
+.food-register {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .food-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .food-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .food-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .food-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .food-list {
+    margin-bottom: 20px;
+  }
+  
+  .food-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .food-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .food-list button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .food-list button:hover {
+    background-color: #cc0000;
+  }
+  
+  .calories-summary {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+  }
+  

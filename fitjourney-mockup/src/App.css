@@ -1,0 +1,458 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Cards de Funcionalidades */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.card {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.footer-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Eliminar estilos de enlace en las cards */
+.card {
+  text-decoration: none;
+  /* Quita el subrayado */
+  color: inherit;
+  /* Hereda el color del texto (no azul) */
+}
+
+.card h2 {
+  color: #ffffff;
+  /* Color oscuro para el título */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+  /* Cambia el fondo al hacer hover */
+}
+
+
+.card2 {
+  /*  background-color: white; */
+  border-radius: 10px;
+  padding: 20px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card2:hover {
+  transform: scale(1.05);
+}
+
+.card2 h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card2 p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #fffefe;
+}
+
+.main-image {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+}
+
+
+/* imnagen para las cards */
+.activity-card {
+  background-image: url('../public/act.jpg');
+  /* Ruta de la imagen */
+  background-size: cover;
+  /* Hace que la imagen cubra toda la card */
+  background-position: center;
+  /* Centra la imagen en la card */
+  color: white;
+  /* Color de texto blanco para que contraste con la imagen */
+  padding: 20px;
+  /* Espaciado interno de la card */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra */
+  /*  height: 200px; /* Ajusta la altura según lo necesites */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Espacio entre los elementos dentro de la card */
+  filter: blur(0px);
+  /* Difumina la imagen */
+  background-size: 100% 100%;
+}
+
+/* Agregar un efecto hover para mejorar la interacción */
+.activity-card:hover {
+  background-color: rgb(255, 255, 255);
+  /* Fondo oscuro con opacidad al hacer hover */
+}
+
+.food-card {
+  background-image: url('../public/food.jpg');
+  /* Ruta de la imagen */
+  background-size: cover;
+  /* Hace que la imagen cubra toda la card */
+  background-position: center;
+  /* Centra la imagen en la card */
+  color: white;
+  /* Color de texto blanco para que contraste con la imagen */
+  padding: 20px;
+  /* Espaciado interno de la card */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra */
+  /*  height: 200px; /* Ajusta la altura según lo necesites */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Espacio entre los elementos dentro de la card */
+  position: relative;
+  z-index: 1;
+  /* Asegúrate de que el contenido esté encima del desenfoque */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+/* Agregar un efecto hover para mejorar la interacción */
+.food-card:hover {
+  background-color: rgb(255, 255, 255);
+  /* Fondo oscuro con opacidad al hacer hover */
+}
+
+.food-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/food.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: -1;
+  /* Coloca el fondo desenfocado detrás del contenido */
+}
+
+.meal-card {
+  background-image: url('../public/meal.jpg');
+  /* Ruta de la imagen */
+  background-size: cover;
+  /* Hace que la imagen cubra toda la card */
+  background-position: center;
+  /* Centra la imagen en la card */
+  color: white;
+  /* Color de texto blanco para que contraste con la imagen */
+  padding: 20px;
+  /* Espaciado interno de la card */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra */
+  /*  height: 200px; /* Ajusta la altura según lo necesites */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Espacio entre los elementos dentro de la card */
+  position: relative;
+  z-index: 1;
+  /* Asegúrate de que el contenido esté encima del desenfoque */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+/* Agregar un efecto hover para mejorar la interacción */
+.meal-card:hover {
+  background-color: rgb(255, 255, 255);
+  /* Fondo oscuro con opacidad al hacer hover */
+}
+
+.meal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/meal.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: -1;
+  /* Coloca el fondo desenfocado detrás del contenido */
+}
+
+
+/************************* */
+.card2 {
+  background-image: url('../public/principale.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: calc(100% - 80px); /* Ajusta el ancho sumando márgenes */
+  margin-left: auto; /* Margen automático a la izquierda */
+  margin-right: auto; /* Margen automático a la derecha */
+  margin-top: 20px;;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+.card2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* ************************ */
+
+/* Contenedor de la barra de progreso */
+.progress-container {
+  position: absolute; /* Posiciona la barra de progreso dentro de la card */
+  bottom: 0; /* La coloca en la parte inferior */
+  left: 0; /* Alinea a la izquierda */
+  right: 0; /* Alinea a la derecha */
+  height: 10px; /* Altura de la barra de progreso */
+  background-color: #e0e0e0b7; /* Color de fondo de la barra */
+  border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
+  overflow: hidden; /* Para que el contenido no se desborde */
+}
+
+/* Barra de progreso */
+.progress-bar {
+  height: 100%;
+  background-color: #4CAF50; /* Color de la barra de progreso */
+  transition: width 0.3s ease; /* Animación suave al cambiar el ancho */
+}
+/***********************/
+
+
+
+
+
+.stats-card {
+  background-image: url('../public/progre.jpg');
+  /* Ruta de la imagen */
+  background-size: cover;
+  /* Hace que la imagen cubra toda la card */
+  background-position: center;
+  /* Centra la imagen en la card */
+  color: white;
+  /* Color de texto blanco para que contraste con la imagen */
+  padding: 20px;
+  /* Espaciado interno de la card */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra */
+  /*  height: 200px; /* Ajusta la altura según lo necesites */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Espacio entre los elementos dentro de la card */
+  position: relative;
+  z-index: 1;
+  /* Asegúrate de que el contenido esté encima del desenfoque */
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+/* Agregar un efecto hover para mejorar la interacción */
+.stats-card:hover {
+  background-color: rgb(255, 255, 255);
+  /* Fondo oscuro con opacidad al hacer hover */
+}
+
+.stats-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/progre.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: -1;
+  /* Coloca el fondo desenfocado detrás del contenido */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  position: relative;
+  /* Necesario para posicionar el menú desplegable */
+}
+
+.profile-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Menú desplegable */
+.user-menu {
+  position: absolute;
+  top: 50px;
+  /* Para que el menú se muestre justo debajo del icono */
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 150px;
+  z-index: 100;
+}
+
+.user-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+
+.user-menu li {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.user-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Modo oscuro */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .header {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .card {
+  background-color: #444;
+}
+
+.dark-mode .footer {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .user-menu {
+  background-color: #555;
+}
+
+.dark-mode .user-menu li:hover {
+  background-color: #666;
+}
+
+.user-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.user-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+}
